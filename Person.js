@@ -1,18 +1,22 @@
 import Model from './Model.js'
 
 /**
- * A class representing a Person.
- * @prop {String}   abbreviation
- * @prop {Date}     dateCreated
- * @prop {Date}     dateModified
- * @prop {String}   email
- * @prop {String}   familyName
- * @prop {String}   givenName
- * @prop {String}   id
- * @prop {'Person'} type
+ * A class representing a person.
+ * @prop {String} abbreviation
+ * @prop {Date}   dateCreated
+ * @prop {Date}   dateModified
+ * @prop {String} email
+ * @prop {String} familyName
+ * @prop {String} givenName
+ * @prop {String} id
  */
 export default class Person extends Model {
 
+  /**
+   * @const
+   * @readonly
+   * @type {String}
+   */
   type = `Person`
 
   /**
@@ -36,10 +40,10 @@ export default class Person extends Model {
    */
   getReference() {
     return {
-      abbreviation: this.abbreviation,
-      familyName:   this.familyName,
-      givenName:    this.givenName,
-      id:           this.id,
+      id: this.id,
+      ...this.abbreviation ?? { abbreviation: this.abbreviation },
+      ...this.familyName ?? { familyName: this.familyName },
+      ...this.givenName ?? { givenName: this.givenName },
     }
   }
 
