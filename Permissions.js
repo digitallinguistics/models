@@ -1,7 +1,9 @@
+import Model from './Model.js'
+
 /**
  * A class representing a set of permissions.
  */
-export default class Permissions {
+export default class Permissions extends Model {
 
   /**
    * Users with the owner role.
@@ -32,6 +34,7 @@ export default class Permissions {
    * @param {Object} [data={}]
    */
   constructor(data = {}) {
+    super()
     Object.assign(this, data)
   }
 

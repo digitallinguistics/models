@@ -1,3 +1,5 @@
+import Model from './Model.js'
+
 /**
  * A class representing a Person.
  * @prop {String}   abbreviation
@@ -9,7 +11,7 @@
  * @prop {String}   id
  * @prop {'Person'} type
  */
-export default class Person {
+export default class Person extends Model {
 
   type = `Person`
 
@@ -19,6 +21,8 @@ export default class Person {
    */
   constructor(data = {}) {
 
+    super()
+
     Object.assign(this, data)
 
     this.dateCreated  = new Date(this.dateCreated)
@@ -26,6 +30,10 @@ export default class Person {
 
   }
 
+  /**
+   * Get a core subset of the data for partial embedding and reference.
+   * @returns {Object}
+   */
   getReference() {
     return {
       abbreviation: this.abbreviation,
