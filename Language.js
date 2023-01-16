@@ -42,8 +42,8 @@ export default class Language extends Model {
 
     Object.assign(this, data)
 
-    this.dateCreated  ??= new Date
-    this.dateModified ??= new Date
+    this.dateCreated  = new Date(this.dateCreated)
+    this.dateModified = new Date(this.dateModified)
 
   }
 
@@ -55,10 +55,10 @@ export default class Language extends Model {
     return {
       id:   this.id,
       name: this.name,
-      ...this.autonyms ?? { autonyms: this.autonyms },
-      ...this.defaultAnalysisLanguage ?? { defaultAnalysisLanguage: this.defaultAnalysisLanguage },
-      ...this.defaultOrthography ?? { defaultOrthography: this.defaultOrthography },
-      ...this.exonyms ?? { exonyms: this.autonyms },
+      ...this.autonyms && { autonyms: this.autonyms },
+      ...this.defaultAnalysisLanguage && { defaultAnalysisLanguage: this.defaultAnalysisLanguage },
+      ...this.defaultOrthography && { defaultOrthography: this.defaultOrthography },
+      ...this.exonyms && { exonyms: this.autonyms },
     }
   }
 

@@ -41,9 +41,9 @@ export default class Person extends Model {
   getReference() {
     return {
       id: this.id,
-      ...this.abbreviation ?? { abbreviation: this.abbreviation },
-      ...this.familyName ?? { familyName: this.familyName },
-      ...this.givenName ?? { givenName: this.givenName },
+      ...this.abbreviation && { abbreviation: this.abbreviation },
+      ...this.familyName && { familyName: this.familyName },
+      ...this.givenName && { givenName: this.givenName },
     }
   }
 
