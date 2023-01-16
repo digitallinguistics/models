@@ -1,0 +1,25 @@
+{
+  "name": "@digitallinguistics/models",
+  "version": 0.1,
+  "description": "Database models for the DLx infrastructure",
+  "homepage": "https://github.com/digitallinguistics/models",
+  "bugs": "https://github.com/digitallinguistics/models/issues",
+  "license": "MIT",
+  "author": {
+    "name": "Daniel W. Hieber",
+    "url": "https://github.com/dwhieb"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "index.js",
+  "type": "module",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {},
+  "devDependencies": {
+    "@digitallinguistics/eslint-config": "^0.2.0",
+    "eslint": "^8.32.0"
+  }
+}
