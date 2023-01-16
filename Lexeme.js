@@ -1,7 +1,10 @@
-import Model from './Mode.js'
+import Model from './Model.js'
 
 /**
  * A class representing a lexeme.
+ * @prop {Array<BibliographicReference>} bibliography
+ * @prop {String}                        id
+ * @prop {MultiLangString}               slot
  */
 export default class Lexeme extends Model {
 
@@ -46,7 +49,7 @@ export default class Lexeme extends Model {
 
   /**
    * Create a new Lexeme object.
-   * @param {Object} data
+   * @param {Object} [data={}]
    */
   constructor(data = {}) {
 
@@ -54,8 +57,8 @@ export default class Lexeme extends Model {
 
     Object.assign(this, data)
 
-    this.dateCreated  = new Date(this.dateCreated)
-    this.dateModified = new Date(this.dateModified)
+    this.dateCreated  = this.dateCreated ? new Date(this.dateCreated) : new Date
+    this.dateModified = this.dateModified ? new Date(this.dateModified) : new Date
 
   }
 

@@ -34,7 +34,7 @@ export default class Language extends Model {
 
   /**
    * Create a new Language object.
-   * @param {Object} data
+   * @param {Object} [data={}]
    */
   constructor(data = {}) {
 
@@ -42,8 +42,8 @@ export default class Language extends Model {
 
     Object.assign(this, data)
 
-    this.dateCreated  = new Date(this.dateCreated)
-    this.dateModified = new Date(this.dateModified)
+    this.dateCreated  = this.dateCreated ? new Date(this.dateCreated) : new Date
+    this.dateModified = this.dateModified ? new Date(this.dateModified) : new Date
 
   }
 
@@ -55,10 +55,8 @@ export default class Language extends Model {
     return {
       id:   this.id,
       name: this.name,
-      ...this.autonyms && { autonyms: this.autonyms },
       ...this.defaultAnalysisLanguage && { defaultAnalysisLanguage: this.defaultAnalysisLanguage },
       ...this.defaultOrthography && { defaultOrthography: this.defaultOrthography },
-      ...this.exonyms && { exonyms: this.autonyms },
     }
   }
 

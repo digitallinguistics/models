@@ -29,8 +29,8 @@ export default class Person extends Model {
 
     Object.assign(this, data)
 
-    this.dateCreated  = new Date(this.dateCreated)
-    this.dateModified = new Date(this.dateModified)
+    this.dateCreated  = this.dateCreated ? new Date(this.dateCreated) : new Date
+    this.dateModified = this.dateModified ? new Date(this.dateModified) : new Date
 
   }
 
