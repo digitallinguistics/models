@@ -2,9 +2,14 @@ import Model from './Model.js'
 
 /**
  * A class representing a lexeme.
- * @prop {Array<BibliographicReference>} bibliography
- * @prop {String}                        id
- * @prop {MultiLangString}               slot
+ * @prop {Array<Citation>}         [bibliography]
+ * @prop {Category}                [category]
+ * @prop {Array<CrossReference>}   [crossReferences]
+ * @prop {UUID}                    id
+ * @prop {MultiLangString}         [morphType]
+ * @prop {MultiLangString}         [slot]
+ * @prop {Tags}                    [tags]
+ * @prop {MultiOrthoTranscription} [UR]
  */
 export default class Lexeme extends Model {
 
@@ -22,7 +27,9 @@ export default class Lexeme extends Model {
 
   /**
    * Information about the lemma for this lexeme.
+   * @prop {Boolean}                 [abstract]
    * @prop {MultiOrthoTranscription} transcription
+   * @prop {Boolean}                 [reconstructed]
    */
   lemma = {
     transcription: {},

@@ -2,9 +2,14 @@ import Model from './Model.js'
 
 /**
  * A class representing a lexeme form.
- * @prop {Date}   dateCreated
- * @prop {Date}   dateModified
- * @prop {String} id
+ * @prop {Array<Allomorph>}              [allomorphs]
+ * @prop {Array<DatabaseReference:Form>} [components]
+ * @prop {Array<DatabaseReference:Form>} [componentOf]
+ * @prop {Date}                          dateCreated
+ * @prop {Date}                          dateModified
+ * @prop {Array<DatabaseReference:Form>} [etymology]
+ * @prop {UUID}                          id
+ * @prop {MultiOrthoTranscription}       [UR]
  */
 export default class Form extends Model {
 

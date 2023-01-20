@@ -2,14 +2,14 @@ import Model from './Model.js'
 
 /**
  * A class representing a language.
- * @prop {Array<Autonym>} autonyms
+ * @prop {Array<Autonym>} [autonyms]
  * @prop {Date}           dateCreated
  * @prop {Date}           dateModified
- * @prop {String}         defaultAnalysisLanguage
- * @prop {String}         defaultOrthography
- * @prop {Array<Exonym>}  exonyms
- * @prop {String}         id
- * @prop {Array<Note>}    notes
+ * @prop {String}         [defaultAnalysisLanguage]
+ * @prop {String}         [defaultOrthography]
+ * @prop {Array<Exonym>}  [exonyms]
+ * @prop {UUID}           id
+ * @prop {Array<Note>}    [notes]
  */
 export default class Language extends Model {
 

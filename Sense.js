@@ -2,9 +2,13 @@ import Model from './Model.js'
 
 /**
  * A class representing a lexeme sense.
- * @prop {Date}   dateCreated
- * @prop {Date}   dateModified
- * @prop {String} id
+ * @prop {Category} [baseCategory]
+ * @prop {Category} [category]
+ * @prop {Date}     dateCreated
+ * @prop {Date}     dateModified
+ * @prop {UUID}     id
+ * @prop {Category} [inflectionClass]
+ * @prop {Category} [semanticClass]
  */
 export default class Sense extends Model {
 
