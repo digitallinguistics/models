@@ -25,7 +25,7 @@
     "eslint": "^8.32.0"
   },
   "peerDependencies": {
-    "@digitallinguistics/schemas": "2.0.0-alpha.4"
+    "@digitallinguistics/schemas": "2.0.0-alpha.5"
   },
   "peerDependenciesMeta": {
     "@digitallinguistics/schemas": {
