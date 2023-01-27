@@ -2,11 +2,10 @@ import Model from './Model.js'
 
 /**
  * A class representing a note.
- * @prop {Date}                     dateCreated
- * @prop {Date}                     dateModified
- * @prop {Boolean}                  [private=true]
- * @prop {DatabaseReference:Person} [source]
- * @prop {String}                   text
+ * @prop {Date}    dateCreated
+ * @prop {Date}    dateModified
+ * @prop {Boolean} [private=true]
+ * @prop {String}  text
  */
 export default class Note extends Model {
 

@@ -1,4 +1,4 @@
-export { default as BibliographicReference } from './models/BibliographicReference.js'
+export { default as BibliographicSource } from './models/BibliographicSource.js'
 export { default as Form } from './models/Form.js'
 export { default as Language } from './models/Language.js'
 export { default as Lexeme } from './models/Lexeme.js'

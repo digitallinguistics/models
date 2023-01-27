@@ -2,14 +2,11 @@ import Model from './Model.js'
 
 /**
  * A class representing a language.
- * @prop {Array<Autonym>} [autonyms]
- * @prop {Date}           dateCreated
- * @prop {Date}           dateModified
- * @prop {String}         [defaultAnalysisLanguage]
- * @prop {String}         [defaultOrthography]
- * @prop {Array<Exonym>}  [exonyms]
- * @prop {UUID}           id
- * @prop {Array<Note>}    [notes]
+ * @prop {Date}   dateCreated
+ * @prop {Date}   dateModified
+ * @prop {String} [defaultAnalysisLanguage]
+ * @prop {String} [defaultOrthography]
+ * @prop {UUID}   id
  */
 export default class Language extends Model {
 
@@ -53,10 +50,10 @@ export default class Language extends Model {
    */
   getReference() {
     return {
-      id:   this.id,
-      name: this.name,
-      ...this.defaultAnalysisLanguage && { defaultAnalysisLanguage: this.defaultAnalysisLanguage },
-      ...this.defaultOrthography && { defaultOrthography: this.defaultOrthography },
+      defaultAnalysisLanguage: this.defaultAnalysisLanguage,
+      defaultOrthography:      this.defaultOrthography,
+      id:                      this.id,
+      name:                    this.name,
     }
   }
 

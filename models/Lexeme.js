@@ -2,14 +2,7 @@ import Model from './Model.js'
 
 /**
  * A class representing a lexeme.
- * @prop {Array<Citation>}         [bibliography]
- * @prop {Category}                [category]
- * @prop {Array<CrossReference>}   [crossReferences]
- * @prop {UUID}                    id
- * @prop {MultiLangString}         [morphType]
- * @prop {MultiLangString}         [slot]
- * @prop {Tags}                    [tags]
- * @prop {MultiOrthoTranscription} [UR]
+ * @prop {UUID} id
  */
 export default class Lexeme extends Model {
 

@@ -1,23 +1,23 @@
 /**
- * A class representing a bibliographic reference.
- * @prop {Date} dateCreated
- * @prop {Date} dateModified
+ * A class representing a bibliographic source.
+ * @prop {Date}   dateCreated
+ * @prop {Date}   dateModified
+ * @prop {String} id
  */
-export default class BibliographicReference {
+export default class BibliographicSource {
 
   /**
    * @const
    * @readonly
    * @type {String}
    */
-  type = `BibliographicReference`
+  type = `BibliographicSource`
 
   /**
-   * Create a new BibliographicReference.
+   * Create a new BibliographicSource.
    * @param {Object} [data={}]
    */
   constructor(data = {}) {
-
 
     Object.assign(this, data)
 

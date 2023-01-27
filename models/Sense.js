@@ -1,7 +1,7 @@
 import Model from './Model.js'
 
 /**
- * A class representing a lexeme sense. Only certain core database properties are documented here. See the [DaFoDiL](https://github.com/digitallinguistics/data-format) specification for details about other properties.
+ * A class representing a lexeme sense.
  * @prop {Date}              dateCreated
  * @prop {Date}              dateModified
  * @prop {UUID}              id

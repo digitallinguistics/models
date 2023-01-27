@@ -2,13 +2,11 @@ import Model from './Model.js'
 
 /**
  * A class representing a lexeme form.
- * @prop {Boolean}                 [abstract]
  * @prop {Date}                    dateCreated
  * @prop {Date}                    dateModified
  * @prop {UUID}                    id
- * @prop {Boolean}                 [reconstructed]
+ * @prop {DatabaseReference}       lexeme
  * @prop {MultiOrthoTranscription} transcription
- * @prop {'Form'}                  type
  */
 export default class Form extends Model {
 

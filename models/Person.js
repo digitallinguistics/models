@@ -2,13 +2,12 @@ import Model from './Model.js'
 
 /**
  * A class representing a person.
- * @prop {String} abbreviation
  * @prop {Date}   dateCreated
  * @prop {Date}   dateModified
- * @prop {String} email
  * @prop {String} familyName
  * @prop {String} givenName
  * @prop {String} id
+ * @prop {String} initials
  */
 export default class Person extends Model {
 
@@ -40,10 +39,10 @@ export default class Person extends Model {
    */
   getReference() {
     return {
-      id: this.id,
-      ...this.abbreviation && { abbreviation: this.abbreviation },
-      ...this.familyName && { familyName: this.familyName },
-      ...this.givenName && { givenName: this.givenName },
+      familyName: this.familyName,
+      givenName:  this.givenName,
+      id:         this.id,
+      initials:   this.initials,
     }
   }
 
