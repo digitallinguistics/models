@@ -1,6 +1,6 @@
 {
   "name": "@digitallinguistics/models",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Database models for the DLx infrastructure",
   "homepage": "https://github.com/digitallinguistics/models",
   "bugs": "https://github.com/digitallinguistics/models/issues",
