@@ -26,5 +26,10 @@
   },
   "peerDependencies": {
     "@digitallinguistics/schemas": "0.2.0"
+  },
+  "peerDependenciesMeta": {
+    "@digitallinguistics/schemas": {
+      "optional": true
+    }
   }
 }
