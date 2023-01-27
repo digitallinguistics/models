@@ -10,7 +10,8 @@
     "url": "https://github.com/dwhieb"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://npm.pkg.github.com"
   },
   "main": "index.js",
   "type": "module",
