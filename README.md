@@ -30,6 +30,12 @@ This method also helps ensure that the structure of Database References is consi
 
 The version number of this package does not need to stay in sync with that of [DaFoDiL]. However, each DaFoDiL release should trigger a version number update in this package. Compatibility between the two packages is indicated by the version number of DaFoDiL in `devDependencies`.
 
+## Releases
+
+1. `npm version`
+2. Create a GitHub release.
+3. The GitHub Actions `release` workflow publishes the package to npm.
+
 [clone]:   https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm
 [Daphne]:  https://github.com/digitallinguistics/api
 [Cosmos]:  https://azure.microsoft.com/en-us/products/cosmos-db/
