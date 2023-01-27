@@ -1,0 +1,5 @@
+extends:
+  - '@digitallinguistics/eslint-config'
+
+env:
+  shared-node-browser: true
