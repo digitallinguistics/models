@@ -8,6 +8,7 @@ import Model from './Model.js'
  * @prop {UUID}                    id
  * @prop {Boolean}                 [reconstructed]
  * @prop {MultiOrthoTranscription} transcription
+ * @prop {'Form'}                  type
  */
 export default class Form extends Model {
 

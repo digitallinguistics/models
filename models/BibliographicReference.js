@@ -18,6 +18,7 @@ export default class BibliographicReference {
    */
   constructor(data = {}) {
 
+
     Object.assign(this, data)
 
     this.dateCreated  = this.dateCreated ? new Date(this.dateCreated) : new Date
