@@ -1,9 +1,7 @@
-import Model from './Model.js'
-
 /**
  * A class representing a set of permissions.
  */
-export default class Permissions extends Model {
+export default class Permissions {
 
   /**
    * Users with the owner role.
@@ -34,8 +32,15 @@ export default class Permissions extends Model {
    * @param {Object} [data={}]
    */
   constructor(data = {}) {
-    super()
     Object.assign(this, data)
+  }
+
+  /**
+   * Get the data as a POJO.
+   * @returns {Object}
+   */
+  get data() {
+    return structuredClone(this)
   }
 
 }
