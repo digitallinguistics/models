@@ -1,9 +1,9 @@
+import Model from './Model.js'
+
 /**
  * A class representing a linguistic text.
- * @prop {Date} dateCreated
- * @prop {Date} dateModified
  */
-export default class Text {
+export default class Text extends Model {
 
   /**
    * @const
@@ -22,12 +22,8 @@ export default class Text {
    * @param {Object} [data={}]
    */
   constructor(data = {}) {
-
+    super(data)
     Object.assign(this, data)
-
-    this.dateCreated  = this.dateCreated ? new Date(this.dateCreated) : new Date
-    this.dateModified = this.dateModified ? new Date(this.dateModified) : new Date
-
   }
 
 }
