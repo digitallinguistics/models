@@ -2,13 +2,10 @@ import Model from './Model.js'
 
 /**
  * A class representing an app user.
- * @prop {Date}   dateCreated
- * @prop {Date}   dateModified
  * @prop {String} email
  * @prop {String} [familyName]
  * @prop {String} [givenName]
  * @prop {String} id
- * @prop {String} [initials]
  */
 export default class User extends Model {
 
@@ -20,18 +17,12 @@ export default class User extends Model {
   type = `User`
 
   /**
-   * Create a new User object.
+   * Create a new Person.
    * @param {Object} [data={}]
    */
   constructor(data = {}) {
-
-    super()
-
+    super(data)
     Object.assign(this, data)
-
-    this.dateCreated  = this.dateCreated ? new Date(this.dateCreated) : new Date
-    this.dateModified = this.dateModified ? new Date(this.dateModified) : new Date
-
   }
 
   /**
