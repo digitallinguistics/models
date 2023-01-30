@@ -3,6 +3,7 @@ import Permissions from './Permissions.js'
 
 /**
  * A class representing a project.
+ * @prop {String} id
  */
 export default class Project extends Model {
 
@@ -23,16 +24,10 @@ export default class Project extends Model {
    * Create a new Project object.
    * @param {Object} [data={}]
    */
-  constructor(data = {}) {
-
-    super()
-
+  constructor(data) {
+    super(data)
     Object.assign(this, data)
-
-    this.dateCreated  = this.dateCreated ? new Date(this.dateCreated) : new Date
-    this.dateModified = this.dateModified ? new Date(this.dateModified) : new Date
-    this.permissions  = new Permissions(this.permissions)
-
+    this.permissions = new Permissions(this.permissions)
   }
 
   /**

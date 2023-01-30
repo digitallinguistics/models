@@ -13,6 +13,11 @@ export default class Text {
   type = `Text`
 
   /**
+   * The utterances in the text.
+   */
+  utterances = []
+
+  /**
    * Create a new Text.
    * @param {Object} [data={}]
    */

@@ -44,7 +44,6 @@ export default class User extends Model {
       familyName: this.familyName,
       givenName:  this.givenName,
       id:         this.id,
-      initials:   this.initials,
     }
   }
 

@@ -2,8 +2,6 @@ import Model from './Model.js'
 
 /**
  * A class representing a person.
- * @prop {Date}   dateCreated
- * @prop {Date}   dateModified
  * @prop {String} familyName
  * @prop {String} givenName
  * @prop {String} id
@@ -23,14 +21,8 @@ export default class Person extends Model {
    * @param {Object} [data={}]
    */
   constructor(data = {}) {
-
-    super()
-
+    super(data)
     Object.assign(this, data)
-
-    this.dateCreated  = this.dateCreated ? new Date(this.dateCreated) : new Date
-    this.dateModified = this.dateModified ? new Date(this.dateModified) : new Date
-
   }
 
   /**

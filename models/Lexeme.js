@@ -48,18 +48,12 @@ export default class Lexeme extends Model {
   type = `Lexeme`
 
   /**
-   * Create a new Lexeme object.
+   * Create a new Lexeme.
    * @param {Object} [data={}]
    */
   constructor(data = {}) {
-
-    super()
-
+    super(data)
     Object.assign(this, data)
-
-    this.dateCreated  = this.dateCreated ? new Date(this.dateCreated) : new Date
-    this.dateModified = this.dateModified ? new Date(this.dateModified) : new Date
-
   }
 
   /**

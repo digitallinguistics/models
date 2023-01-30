@@ -2,8 +2,6 @@ import Model from './Model.js'
 
 /**
  * A class representing a language.
- * @prop {Date}   dateCreated
- * @prop {Date}   dateModified
  * @prop {String} [defaultAnalysisLanguage]
  * @prop {String} [defaultOrthography]
  * @prop {UUID}   id
@@ -30,18 +28,12 @@ export default class Language extends Model {
   type = `Language`
 
   /**
-   * Create a new Language object.
+   * Create a new Language.
    * @param {Object} [data={}]
    */
   constructor(data = {}) {
-
-    super()
-
+    super(data)
     Object.assign(this, data)
-
-    this.dateCreated  = this.dateCreated ? new Date(this.dateCreated) : new Date
-    this.dateModified = this.dateModified ? new Date(this.dateModified) : new Date
-
   }
 
   /**

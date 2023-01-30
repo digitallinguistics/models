@@ -2,8 +2,6 @@ import Model from './Model.js'
 
 /**
  * A class representing a lexeme sense.
- * @prop {Date}              dateCreated
- * @prop {Date}              dateModified
  * @prop {UUID}              id
  * @prop {DatabaseReference} lexeme
  */
@@ -16,18 +14,12 @@ export default class Sense extends Model {
   gloss = {}
 
   /**
-   * Create a new Sense object.
+   * Create a new Sense.
    * @param {Object} [data={}]
    */
   constructor(data = {}) {
-
-    super()
-
+    super(data)
     Object.assign(this, data)
-
-    this.dateCreated  = this.dateCreated ? new Date(this.dateCreated) : new Date
-    this.dateModified = this.dateModified ? new Date(this.dateModified) : new Date
-
   }
 
   /**
