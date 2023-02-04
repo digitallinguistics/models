@@ -1,10 +1,12 @@
-import Model from './Model.js'
+import Model       from './Model.js'
+import Permissions from './Permissions.js'
 
 /**
  * A class representing a language.
- * @prop {String} [defaultAnalysisLanguage]
- * @prop {String} [defaultOrthography]
- * @prop {UUID}   id
+ * @prop {String}      [defaultAnalysisLanguage]
+ * @prop {String}      [defaultOrthography]
+ * @prop {UUID}        id
+ * @prop {Permissions} permissions
  */
 export default class Language extends Model {
 
@@ -34,6 +36,7 @@ export default class Language extends Model {
   constructor(data = {}) {
     super(data)
     Object.assign(this, data)
+    this.permissions = new Permissions(this.permissions)
   }
 
   /**
