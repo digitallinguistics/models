@@ -27,14 +27,22 @@ export default class Model {
   }
 
   /**
+   * Use the `data` property for stringification.
+   * @returns {Object}
+   */
+  toJSON() {
+    return this.data
+  }
+
+  /**
    * Parse a date into an ISO date string.
    * @param {String|Date|undefined} date
    * @returns {String} Returns an ISO date string.
    */
   static getDate(date) {
-    if (date instanceof String) return new Date(date).toISOString()
-    if (date instanceof Date) return date.toISOString()
-    return new Date().toISOString()
+    if (date instanceof String) return new Date(date)
+    if (date instanceof Date) return date
+    return new Date()
   }
 
 }
