@@ -3,7 +3,9 @@ import Permissions from './Permissions.js'
 
 /**
  * A class representing a project.
- * @prop {String} id
+ * @prop {String}      [defaultAnalysisLanguage] The IETF language tag of the default analysis language for this project.
+ * @prop {String}      id
+ * @prop {Permissions} permissions
  */
 export default class Project extends Model {
 
@@ -36,8 +38,9 @@ export default class Project extends Model {
    */
   getReference() {
     return {
-      id:   this.id,
-      name: this.name,
+      defaultAnalysisLanguage: this.defaultAnalysisLanguage,
+      id:                      this.id,
+      name:                    this.name,
     }
   }
 
