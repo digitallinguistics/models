@@ -6,6 +6,11 @@ import Model from './Model.js'
 export default class Text extends Model {
 
   /**
+   * An array of Database References to Projects.
+   */
+  projects = []
+
+  /**
    * @const
    * @readonly
    * @type {String}
