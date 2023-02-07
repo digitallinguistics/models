@@ -4,10 +4,10 @@
 export default class Permissions {
 
   /**
-   * Users with the owner role.
+   * Users with the admin role.
    * @type {Array}
    */
-  owners = []
+  admins = []
 
   /**
    * Users with the editor role.
